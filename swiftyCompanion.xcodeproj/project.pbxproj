@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10865E7A2302E41700B80407 /* SearchUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10865E792302E41700B80407 /* SearchUIButton.swift */; };
+		10865E7C2303117C00B80407 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10865E7B2303117C00B80407 /* Auth.swift */; };
+		10CCFE3923072986002C0B10 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CCFE3823072986002C0B10 /* ProfileViewController.swift */; };
 		10D036A822EF3ADC00656BBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D036A722EF3ADC00656BBE /* AppDelegate.swift */; };
 		10D036AA22EF3ADC00656BBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D036A922EF3ADC00656BBE /* ViewController.swift */; };
 		10D036AD22EF3ADC00656BBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10D036AB22EF3ADC00656BBE /* Main.storyboard */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10865E792302E41700B80407 /* SearchUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUIButton.swift; sourceTree = "<group>"; };
+		10865E7B2303117C00B80407 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		10CCFE3823072986002C0B10 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		10D036A422EF3ADC00656BBE /* swiftyCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftyCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10D036A722EF3ADC00656BBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10D036A922EF3ADC00656BBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +70,9 @@
 				10D036A722EF3ADC00656BBE /* AppDelegate.swift */,
 				10D036A922EF3ADC00656BBE /* ViewController.swift */,
 				10D036AB22EF3ADC00656BBE /* Main.storyboard */,
+				10CCFE3823072986002C0B10 /* ProfileViewController.swift */,
+				10865E7B2303117C00B80407 /* Auth.swift */,
+				10865E792302E41700B80407 /* SearchUIButton.swift */,
 				10D036AE22EF3AE300656BBE /* Assets.xcassets */,
 				10D036B022EF3AE300656BBE /* LaunchScreen.storyboard */,
 				10D036B322EF3AE300656BBE /* Info.plist */,
@@ -77,7 +86,6 @@
 				2C803295F9920A64A81359FA /* Pods-swiftyCompanion.debug.xcconfig */,
 				971DE84B9F16EDA3DAF136FF /* Pods-swiftyCompanion.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -205,7 +213,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				10D036AA22EF3ADC00656BBE /* ViewController.swift in Sources */,
+				10865E7A2302E41700B80407 /* SearchUIButton.swift in Sources */,
+				10CCFE3923072986002C0B10 /* ProfileViewController.swift in Sources */,
 				10D036A822EF3ADC00656BBE /* AppDelegate.swift in Sources */,
+				10865E7C2303117C00B80407 /* Auth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
