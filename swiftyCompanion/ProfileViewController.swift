@@ -12,16 +12,25 @@ import SwiftyJSON
 
 class ProfileViewController: UIViewController {
 
-    var json: JSON?
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var avatar: UIImageView!
+    @IBOutlet weak var backgroundView: UIView!
     
+    var json: JSON?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        avatar.layer.borderWidth = 2
+        avatar.layer.masksToBounds = true
+        avatar.layer.borderColor = UIColor.white.cgColor
+        avatar.layer.cornerRadius = avatar.frame.width / 2
         
-        
-        // Do any additional setup after loading the view.
+        backgroundView.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
+
     }
     
-    func setProfileFields() {
+    func setProfile() {
         
     }
 
