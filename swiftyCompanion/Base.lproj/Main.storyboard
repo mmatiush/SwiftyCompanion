@@ -127,10 +127,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lnk-kU-tEg">
-                                                <rect key="frame" x="0.0" y="29" width="414" height="231"/>
+                                                <rect key="frame" x="0.0" y="29" width="414" height="188.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="EID-LK-UcK">
-                                                        <rect key="frame" x="0.0" y="35" width="183" height="161"/>
+                                                        <rect key="frame" x="0.0" y="14" width="183" height="161"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="small_mmatiush" translatesAutoresizingMaskIntoConstraints="NO" id="fNI-aX-fhk">
                                                                 <rect key="frame" x="29" y="0.0" width="125" height="125"/>
@@ -154,7 +154,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="E9Q-p5-8me">
-                                                        <rect key="frame" x="191" y="62.5" width="223" height="106"/>
+                                                        <rect key="frame" x="191" y="41.5" width="223" height="106"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0931932231" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0I-Ho-Fnj">
                                                                 <rect key="frame" x="101" y="0.0" width="97" height="20.5"/>
@@ -185,20 +185,37 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxt-e8-IE2">
+                                                <rect key="frame" x="186" y="209.5" width="42" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="k8O-sI-F2P">
+                                                <rect key="frame" x="20" y="238" width="374" height="2"/>
+                                                <color key="progressTintColor" red="1" green="0.7066477578" blue="0.031831737929999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </progressView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.80392169950000003" green="0.80392158030000005" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstItem="zP0-fM-iR5" firstAttribute="top" secondItem="hfP-fq-uI9" secondAttribute="top" id="1Zq-mL-gp6"/>
+                                            <constraint firstItem="k8O-sI-F2P" firstAttribute="leading" secondItem="hfP-fq-uI9" secondAttribute="leading" constant="20" symbolic="YES" id="8hg-JU-yeW"/>
                                             <constraint firstAttribute="bottom" secondItem="zP0-fM-iR5" secondAttribute="bottom" id="9Il-aL-HFW"/>
                                             <constraint firstItem="QTY-VQ-fL4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hfP-fq-uI9" secondAttribute="leading" constant="20" symbolic="YES" id="VOS-pt-y4l"/>
+                                            <constraint firstAttribute="trailing" secondItem="k8O-sI-F2P" secondAttribute="trailing" constant="20" symbolic="YES" id="VOh-cA-LLp"/>
+                                            <constraint firstItem="qxt-e8-IE2" firstAttribute="centerX" secondItem="hfP-fq-uI9" secondAttribute="centerX" id="WMP-jy-tpO"/>
                                             <constraint firstItem="Wrm-5c-kMi" firstAttribute="centerX" secondItem="QTY-VQ-fL4" secondAttribute="centerX" id="XLW-AT-CNd"/>
                                             <constraint firstItem="Wrm-5c-kMi" firstAttribute="firstBaseline" secondItem="QTY-VQ-fL4" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="bHY-cm-ffY"/>
                                             <constraint firstItem="lnk-kU-tEg" firstAttribute="top" secondItem="Wrm-5c-kMi" secondAttribute="bottom" constant="-30.5" id="efH-gn-dK1"/>
+                                            <constraint firstItem="lnk-kU-tEg" firstAttribute="bottom" secondItem="qxt-e8-IE2" secondAttribute="top" constant="8" symbolType="layoutAnchor" id="esk-M3-CTL"/>
                                             <constraint firstAttribute="height" constant="260" id="jBq-zH-EO2"/>
-                                            <constraint firstAttribute="bottom" secondItem="lnk-kU-tEg" secondAttribute="bottom" id="k7z-Yc-UOi"/>
                                             <constraint firstItem="lnk-kU-tEg" firstAttribute="leading" secondItem="hfP-fq-uI9" secondAttribute="leading" id="kyf-Hy-sJX"/>
+                                            <constraint firstItem="k8O-sI-F2P" firstAttribute="centerX" secondItem="hfP-fq-uI9" secondAttribute="centerX" id="n8y-kB-PeO"/>
+                                            <constraint firstItem="k8O-sI-F2P" firstAttribute="top" secondItem="qxt-e8-IE2" secondAttribute="bottom" constant="8" symbolic="YES" id="oFI-oA-JG6"/>
                                             <constraint firstItem="zP0-fM-iR5" firstAttribute="leading" secondItem="hfP-fq-uI9" secondAttribute="leading" id="p9f-DQ-acu"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QTY-VQ-fL4" secondAttribute="trailing" constant="20" symbolic="YES" id="r2z-Jx-GSe"/>
+                                            <constraint firstAttribute="bottom" secondItem="k8O-sI-F2P" secondAttribute="bottom" constant="20" symbolic="YES" id="vTR-45-6b1"/>
                                             <constraint firstAttribute="trailing" secondItem="lnk-kU-tEg" secondAttribute="trailing" id="w1N-dK-teF"/>
                                             <constraint firstItem="QTY-VQ-fL4" firstAttribute="top" secondItem="hfP-fq-uI9" secondAttribute="top" constant="20" symbolic="YES" id="w4F-i0-14a"/>
                                             <constraint firstAttribute="trailing" secondItem="zP0-fM-iR5" secondAttribute="trailing" id="wVs-WL-ktV"/>
@@ -270,21 +287,31 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="398" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNw-XH-Gab">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project label" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aNw-XH-Gab">
                                                             <rect key="frame" x="20" y="11.5" width="95" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success" translatesAutoresizingMaskIntoConstraints="NO" id="FA9-e0-mUG">
+                                                            <rect key="frame" x="350" y="8" width="28" height="28"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="28" id="e5n-WY-1kZ"/>
+                                                                <constraint firstAttribute="height" constant="28" id="pzH-Gn-ELV"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="aNw-XH-Gab" firstAttribute="centerY" secondItem="MlL-dN-mY4" secondAttribute="centerY" id="8WI-lQ-hup"/>
+                                                        <constraint firstItem="FA9-e0-mUG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aNw-XH-Gab" secondAttribute="trailing" constant="8" symbolic="YES" id="Lja-x6-t0m"/>
+                                                        <constraint firstItem="FA9-e0-mUG" firstAttribute="centerY" secondItem="MlL-dN-mY4" secondAttribute="centerY" id="PHw-gZ-rwH"/>
                                                         <constraint firstItem="aNw-XH-Gab" firstAttribute="leading" secondItem="MlL-dN-mY4" secondAttribute="leading" constant="20" symbolic="YES" id="TdF-vA-kEP"/>
-                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aNw-XH-Gab" secondAttribute="trailing" constant="20" symbolic="YES" id="Tyq-Xe-awx"/>
+                                                        <constraint firstAttribute="trailing" secondItem="FA9-e0-mUG" secondAttribute="trailing" constant="20" id="X62-5b-JMe"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
                                                     <outlet property="projectLabel" destination="aNw-XH-Gab" id="gpF-oL-ra9"/>
+                                                    <outlet property="statusImage" destination="FA9-e0-mUG" id="Fci-Yc-gDF"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -329,6 +356,8 @@
                     <connections>
                         <outlet property="avatar" destination="fNI-aX-fhk" id="1Pr-7a-I7m"/>
                         <outlet property="backgroundView" destination="hfP-fq-uI9" id="fTN-WP-eOd"/>
+                        <outlet property="level" destination="qxt-e8-IE2" id="IaD-35-Z1N"/>
+                        <outlet property="levelProgressBar" destination="k8O-sI-F2P" id="lsH-Iv-7Ss"/>
                         <outlet property="projectsTable" destination="7F2-8m-8PI" id="tFY-mh-9hu"/>
                         <outlet property="scrollView" destination="dFg-jH-z6b" id="eMO-k8-ejX"/>
                         <outlet property="skillsTable" destination="WbU-6H-yGh" id="4z5-NY-nCj"/>
@@ -342,5 +371,6 @@
     <resources>
         <image name="background" width="2000" height="1300"/>
         <image name="small_mmatiush" width="146" height="175"/>
+        <image name="success" width="100" height="100"/>
     </resources>
 </document>

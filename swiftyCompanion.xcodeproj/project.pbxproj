@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		101B10CB2316AF0100A47FEA /* TableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101B10CA2316AF0100A47FEA /* TableViewCells.swift */; };
-		10865E7A2302E41700B80407 /* SearchUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10865E792302E41700B80407 /* SearchUIButton.swift */; };
-		10865E7C2303117C00B80407 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10865E7B2303117C00B80407 /* Auth.swift */; };
-		10CCFE3923072986002C0B10 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CCFE3823072986002C0B10 /* ProfileViewController.swift */; };
-		10D036A822EF3ADC00656BBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D036A722EF3ADC00656BBE /* AppDelegate.swift */; };
-		10D036AA22EF3ADC00656BBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D036A922EF3ADC00656BBE /* ViewController.swift */; };
+		10C7FA842326A04B0087A9CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D036A922EF3ADC00656BBE /* ViewController.swift */; };
+		10C7FA852326A04B0087A9CA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CCFE3823072986002C0B10 /* ProfileViewController.swift */; };
+		10C7FA862326A04B0087A9CA /* SearchUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10865E792302E41700B80407 /* SearchUIButton.swift */; };
+		10C7FA872326A04B0087A9CA /* TableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101B10CA2316AF0100A47FEA /* TableViewCells.swift */; };
+		10C7FA882326A04B0087A9CA /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10865E7B2303117C00B80407 /* Auth.swift */; };
+		10C7FA8C2326A04B0087A9CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D036A722EF3ADC00656BBE /* AppDelegate.swift */; };
 		10D036AD22EF3ADC00656BBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10D036AB22EF3ADC00656BBE /* Main.storyboard */; };
 		10D036AF22EF3AE300656BBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10D036AE22EF3AE300656BBE /* Assets.xcassets */; };
 		10D036B222EF3AE300656BBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10D036B022EF3AE300656BBE /* LaunchScreen.storyboard */; };
@@ -21,7 +21,7 @@
 
 /* Begin PBXFileReference section */
 		101B10CA2316AF0100A47FEA /* TableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCells.swift; sourceTree = "<group>"; };
-		10865E792302E41700B80407 /* SearchUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUIButton.swift; sourceTree = "<group>"; };
+		10865E792302E41700B80407 /* SearchUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchUIButton.swift; path = ../View/SearchUIButton.swift; sourceTree = "<group>"; };
 		10865E7B2303117C00B80407 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		10CCFE3823072986002C0B10 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		10D036A422EF3ADC00656BBE /* swiftyCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftyCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +48,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10B6D39223217FEA00BC3602 /* ViewContorllers */ = {
+			isa = PBXGroup;
+			children = (
+				10D036A922EF3ADC00656BBE /* ViewController.swift */,
+				10CCFE3823072986002C0B10 /* ProfileViewController.swift */,
+			);
+			path = ViewContorllers;
+			sourceTree = "<group>";
+		};
+		10B6D3932321803800BC3602 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				10D036AE22EF3AE300656BBE /* Assets.xcassets */,
+				10D036B022EF3AE300656BBE /* LaunchScreen.storyboard */,
+				10D036B322EF3AE300656BBE /* Info.plist */,
+				10D036A722EF3ADC00656BBE /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		10B6D394232180B800BC3602 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				10865E7B2303117C00B80407 /* Auth.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		10C7FA8223269FD10087A9CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				10865E792302E41700B80407 /* SearchUIButton.swift */,
+				101B10CA2316AF0100A47FEA /* TableViewCells.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		10D0369B22EF3ADC00656BBE = {
 			isa = PBXGroup;
 			children = (
@@ -69,16 +106,11 @@
 		10D036A622EF3ADC00656BBE /* swiftyCompanion */ = {
 			isa = PBXGroup;
 			children = (
-				10D036A922EF3ADC00656BBE /* ViewController.swift */,
-				10CCFE3823072986002C0B10 /* ProfileViewController.swift */,
 				10D036AB22EF3ADC00656BBE /* Main.storyboard */,
-				101B10CA2316AF0100A47FEA /* TableViewCells.swift */,
-				10865E792302E41700B80407 /* SearchUIButton.swift */,
-				10865E7B2303117C00B80407 /* Auth.swift */,
-				10D036AE22EF3AE300656BBE /* Assets.xcassets */,
-				10D036B022EF3AE300656BBE /* LaunchScreen.storyboard */,
-				10D036B322EF3AE300656BBE /* Info.plist */,
-				10D036A722EF3ADC00656BBE /* AppDelegate.swift */,
+				10B6D39223217FEA00BC3602 /* ViewContorllers */,
+				10C7FA8223269FD10087A9CA /* View */,
+				10B6D394232180B800BC3602 /* Networking */,
+				10B6D3932321803800BC3602 /* Supporting Files */,
 			);
 			path = swiftyCompanion;
 			sourceTree = "<group>";
@@ -215,12 +247,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10D036AA22EF3ADC00656BBE /* ViewController.swift in Sources */,
-				10865E7A2302E41700B80407 /* SearchUIButton.swift in Sources */,
-				10CCFE3923072986002C0B10 /* ProfileViewController.swift in Sources */,
-				10D036A822EF3ADC00656BBE /* AppDelegate.swift in Sources */,
-				10865E7C2303117C00B80407 /* Auth.swift in Sources */,
-				101B10CB2316AF0100A47FEA /* TableViewCells.swift in Sources */,
+				10C7FA842326A04B0087A9CA /* ViewController.swift in Sources */,
+				10C7FA852326A04B0087A9CA /* ProfileViewController.swift in Sources */,
+				10C7FA862326A04B0087A9CA /* SearchUIButton.swift in Sources */,
+				10C7FA872326A04B0087A9CA /* TableViewCells.swift in Sources */,
+				10C7FA882326A04B0087A9CA /* Auth.swift in Sources */,
+				10C7FA8C2326A04B0087A9CA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +401,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8QMURK9V3B;
-				INFOPLIST_FILE = swiftyCompanion/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/swiftyCompanion/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -388,7 +420,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8QMURK9V3B;
-				INFOPLIST_FILE = swiftyCompanion/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/swiftyCompanion/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

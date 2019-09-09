@@ -16,5 +16,6 @@ class SkillsTableViewCell: UITableViewCell {
 
 class ProjectsTableViewCell: UITableViewCell {
     @IBOutlet weak var projectLabel: UILabel!
+    @IBOutlet weak var statusImage: UIImageView!
     
 }

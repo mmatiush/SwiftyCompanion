@@ -80,7 +80,7 @@ class Auth: NSObject {
         Alamofire.request(loginURL, headers: bearer).validate().responseJSON { (responseJSON) in
             switch responseJSON.result {
             case .success(let value):
-                print("User JSON -> ", JSON(value))
+//                print("User JSON -> ", JSON(value))
                 completionHandler(JSON(value))
             case .failure(let error):
                 completionHandler(nil)
