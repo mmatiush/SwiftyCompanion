@@ -47,8 +47,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "background"))
         searchButton.isEnabled = false
-        view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
         auth.getToken()
         
         // remove this segue

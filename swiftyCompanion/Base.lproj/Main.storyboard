@@ -130,23 +130,17 @@
                                                 <rect key="frame" x="0.0" y="29" width="414" height="188.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="EID-LK-UcK">
-                                                        <rect key="frame" x="0.0" y="14" width="183" height="161"/>
+                                                        <rect key="frame" x="0.0" y="23" width="183" height="143"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="small_mmatiush" translatesAutoresizingMaskIntoConstraints="NO" id="fNI-aX-fhk">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Combined Shape" translatesAutoresizingMaskIntoConstraints="NO" id="fNI-aX-fhk">
                                                                 <rect key="frame" x="29" y="0.0" width="125" height="125"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="125" id="gCE-4N-gXo"/>
                                                                     <constraint firstAttribute="height" constant="125" id="xYG-cK-hbM"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l54-8I-1zD">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l54-8I-1zD">
                                                                 <rect key="frame" x="65" y="127" width="53.5" height="16"/>
-                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="e1p2r4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcC-6X-bUu">
-                                                                <rect key="frame" x="70.5" y="145" width="42" height="16"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -185,8 +179,8 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxt-e8-IE2">
-                                                <rect key="frame" x="186" y="209.5" width="42" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxt-e8-IE2">
+                                                <rect key="frame" x="189.5" y="209.5" width="35" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -354,13 +348,20 @@
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="5M4-50-e8R"/>
                     <connections>
+                        <outlet property="availability" destination="l54-8I-1zD" id="K87-C6-U54"/>
                         <outlet property="avatar" destination="fNI-aX-fhk" id="1Pr-7a-I7m"/>
                         <outlet property="backgroundView" destination="hfP-fq-uI9" id="fTN-WP-eOd"/>
+                        <outlet property="correctionPoints" destination="Q1u-Zj-d9X" id="QM0-Rx-9Us"/>
+                        <outlet property="grade" destination="QnE-3Y-Adh" id="FY2-X3-lMP"/>
                         <outlet property="level" destination="qxt-e8-IE2" id="IaD-35-Z1N"/>
                         <outlet property="levelProgressBar" destination="k8O-sI-F2P" id="lsH-Iv-7Ss"/>
+                        <outlet property="login" destination="Wrm-5c-kMi" id="s4r-R1-H2V"/>
+                        <outlet property="name" destination="QTY-VQ-fL4" id="hhl-Yf-mlw"/>
+                        <outlet property="phone" destination="W0I-Ho-Fnj" id="w9o-NB-BOr"/>
                         <outlet property="projectsTable" destination="7F2-8m-8PI" id="tFY-mh-9hu"/>
                         <outlet property="scrollView" destination="dFg-jH-z6b" id="eMO-k8-ejX"/>
                         <outlet property="skillsTable" destination="WbU-6H-yGh" id="4z5-NY-nCj"/>
+                        <outlet property="wallet" destination="jIf-CN-Mcq" id="43u-c2-Lhx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pqh-a1-fmM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -369,8 +370,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Combined Shape" width="150" height="150"/>
         <image name="background" width="2000" height="1300"/>
-        <image name="small_mmatiush" width="146" height="175"/>
         <image name="success" width="100" height="100"/>
     </resources>
 </document>

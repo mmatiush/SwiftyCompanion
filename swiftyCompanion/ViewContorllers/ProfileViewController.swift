@@ -15,10 +15,20 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var backgroundView: UIView!
-    @IBOutlet weak var skillsTable: UITableView!
-    @IBOutlet weak var projectsTable: UITableView!
+    
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var login: UILabel!
+    @IBOutlet weak var phone: UILabel!
+    @IBOutlet weak var wallet: UILabel!
+    @IBOutlet weak var correctionPoints: UILabel!
+    @IBOutlet weak var grade: UILabel!
+    @IBOutlet weak var availability: UILabel!
     @IBOutlet weak var level: UILabel!
     @IBOutlet weak var levelProgressBar: UIProgressView!
+    
+    @IBOutlet weak var skillsTable: UITableView!
+    @IBOutlet weak var projectsTable: UITableView!
+    
     
     
     var json: JSON!
@@ -39,13 +49,55 @@ class ProfileViewController: UIViewController {
         skillsTable.layer.cornerRadius = 5
         projectsTable.layer.cornerRadius = 5
 
+        setProfile()
+        setPhoto()
     }
     
     func setProfile() {
         
+        if let name = json["displayname"].string {
+            self.name.text = name
+        }
+        if let login = json["login"].string {
+            self.login.text = "(\(login))"
+        }
+        if let phone = json["phone"].string {
+            self.phone.text = phone
+        }
+        if let wallet = json["wallet"].int {
+            self.wallet.text = "Wallet: \(wallet)"
+        }
+        if let correctionPoints = json["correction_point"].int {
+            self.correctionPoints.text = "Corrections: \(correctionPoints)"
+        }
+        if let grade = json["cursus_users"][0]["grade"].string {
+            self.grade.text = "Grade: \(grade)"
+        }
+        
+        if let availability = json["location"].string {
+            self.availability.text = "Available\n\(availability)"
+        } else {
+            self.availability.text = "Unavailable\n-"
+        }
+        
+        if let level = json["cursus_users"][0]["level"].float {
+            let progress = modf(level).1
+            levelProgressBar.progress = progress
+            self.level.text = "Level: \(Int(level)) - \(Int(progress * 100))%"
+        }
     }
 
     func setPhoto() {
+        guard let urlString = json["image_url"].string else { return }
+        guard let url = URL(string: urlString) else { return }
+        
+        DispatchQueue.global().async {
+            if let data = try? Data(contentsOf: url) {
+                DispatchQueue.main.async {
+                    self.avatar.image = UIImage(data: data)
+                }
+            }
+        }
         
     }
     
