@@ -15,10 +15,11 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var backgroundViewImage: UIImageView!
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var login: UILabel!
-    @IBOutlet weak var phone: UILabel!
+    @IBOutlet weak var email: UILabel!
     @IBOutlet weak var wallet: UILabel!
     @IBOutlet weak var correctionPoints: UILabel!
     @IBOutlet weak var grade: UILabel!
@@ -28,14 +29,29 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var skillsTable: UITableView!
     @IBOutlet weak var projectsTable: UITableView!
-    
-    
-    
+
     var json: JSON!
 
+//    func assignBackgroundImageForBackgroundView() {
+//        let background = UIImage(named: "background")
+//
+//        let imageView = UIImageView(frame: backgroundView.bounds)
+//        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+//        imageView.clipsToBounds = true
+//        imageView.image = background
+//        imageView.center = backgroundView.center
+//        backgroundView.addSubview(imageView)
+//        backgroundView.sendSubviewToBack(imageView)
+//    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        backgroundViewImage.frame = backgroundView.bounds
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         avatar.layer.borderWidth = 2
         avatar.layer.masksToBounds = true
         avatar.layer.borderColor = UIColor.white.cgColor
@@ -46,11 +62,13 @@ class ProfileViewController: UIViewController {
         levelProgressBar.clipsToBounds = true
         levelProgressBar.layer.sublayers![1].cornerRadius = levelProgressBar.frame.height / 2
         levelProgressBar.subviews[1].clipsToBounds = true
+        
         skillsTable.layer.cornerRadius = 5
         projectsTable.layer.cornerRadius = 5
 
         setProfile()
         setPhoto()
+        
     }
     
     func setProfile() {
@@ -61,8 +79,8 @@ class ProfileViewController: UIViewController {
         if let login = json["login"].string {
             self.login.text = "(\(login))"
         }
-        if let phone = json["phone"].string {
-            self.phone.text = phone
+        if let email = json["email"].string {
+            self.email.text = email
         }
         if let wallet = json["wallet"].int {
             self.wallet.text = "Wallet: \(wallet)"
