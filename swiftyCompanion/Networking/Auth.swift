@@ -15,9 +15,7 @@ class Auth: NSObject {
     
     private let userAccount = "myAccount"
     private var token = String()
-    private var bearer: [String: String] {
-        return ["Authorization": "Bearer " + token]
-    }
+    private var bearer: [String: String] { return ["Authorization": "Bearer " + token] }
     
     private var authURL = "https://api.intra.42.fr/oauth/token"
     private var tokenInfoURL: String { return authURL + "/info" }
@@ -29,23 +27,29 @@ class Auth: NSObject {
         "scope": "public"
     ]
 
+    func checkIfTokenStoredInKeyChain() {
+        let userData = Locksmith.loadDataForUserAccount(userAccount: userAccount)
+        if let value = userData?["token"] as? String {
+            token = value
+        } else {
+            token = ""
+        }
+    }
+    
     func getToken() {
         
-        if let checkValidToken = Locksmith.loadDataForUserAccount(userAccount: userAccount),
-            let temp = checkValidToken["token"] as? String {
-            token = temp
-        }
+        checkIfTokenStoredInKeyChain()
         if token.isEmpty {
             Alamofire.request(authURL, method: .post, parameters: parameters).validate().responseJSON { (responseJSON) in
                 switch responseJSON.result {
                 case .success(let value):
                     let json = JSON(value)
-                    if let token = json["access_token"].string {
-                        self.token = token
+                    if let value = json["access_token"].string {
+                        self.token = value
                         do {
-                            try Locksmith.saveData(data: ["token": token], forUserAccount: self.userAccount)
+                            try Locksmith.saveData(data: ["token": value], forUserAccount: self.userAccount)
                         } catch {
-                            print("Unable to save token in keychain")
+                            print("Unable to save token in KeyChain")
                         }
                         print("Generated a new token: ", self.token)
                     }
@@ -81,11 +85,10 @@ class Auth: NSObject {
                 print("The token will expire in: ", json["expires_in_seconds"], " seconds")
             case .failure:
                 print("Token is invalid. Will get a new one.")
-                self.token = ""
                 do {
                     try Locksmith.deleteDataForUserAccount(userAccount: self.userAccount)
                 } catch {
-                    print("Couldn't delete ataForUserAccount from KeyChain. Error: ", error)
+                    print("Couldn't delete data for user \(self.userAccount) from KeyChain. Error: ", error)
                 }
                 print("Invalid token was deleted from KeyChain")
                 self.getToken()

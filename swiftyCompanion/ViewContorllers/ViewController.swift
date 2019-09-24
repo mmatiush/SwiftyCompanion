@@ -51,11 +51,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "background"))
         searchButton.isEnabled = false
-        do {
-            try Locksmith.updateData(data: ["token": "ff4fce41f096779ef10921c43a1e5d1975d00925cf06e187af2fc8db0c7be1c3"], forUserAccount: "myAccount")
-        } catch {
-            print("Unable to save token in keychain")
-        }
+//        do {
+//            try Locksmith.updateData(data: ["token": "ff4fce41f096779ef10921c43a1e5d1975d00925cf06e187af2fc8db0c7be1c3"], forUserAccount: "myAccount")
+//        } catch {
+//            print("Unable to save token in keychain")
+//        }
         auth.getToken()
         
         // remove this segue
