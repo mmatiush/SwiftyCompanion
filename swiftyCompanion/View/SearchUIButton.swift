@@ -15,5 +15,5 @@ class SearchUIButton: UIButton {
             backgroundColor = isEnabled ? #colorLiteral(red: 1, green: 0.6440272331, blue: 0, alpha: 1) : #colorLiteral(red: 0.8038417697, green: 0.8039775491, blue: 0.8038237691, alpha: 1)
         }
     }
-    
+
 }

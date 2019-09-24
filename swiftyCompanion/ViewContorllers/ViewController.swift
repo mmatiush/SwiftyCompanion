@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Locksmith
 
 class ViewController: UIViewController {
    
@@ -22,14 +23,15 @@ class ViewController: UIViewController {
     @IBAction func searchButtonPressed(_ sender: UIButton) {
         searchButton.isEnabled = false
         activityIndicator.startAnimating()
-        auth.searchLogin(searchTextField.text!) { (json) in
+        auth.searchLogin(searchTextField.text!) { (json, errorMessage) in
             
             self.activityIndicator.stopAnimating()
             if json != nil {
                 self.json = json
                 self.performSegue(withIdentifier: "segueToProfileVC", sender: self)
             } else {
-                let alert = UIAlertController(title: "Error", message: "Login \(self.searchTextField.text!) doesn't exist", preferredStyle: .alert)
+                let message = errorMessage ?? "Login \(self.searchTextField.text!) doesn't exist"
+                let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }
@@ -49,6 +51,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "background"))
         searchButton.isEnabled = false
+        do {
+            try Locksmith.updateData(data: ["token": "ff4fce41f096779ef10921c43a1e5d1975d00925cf06e187af2fc8db0c7be1c3"], forUserAccount: "myAccount")
+        } catch {
+            print("Unable to save token in keychain")
+        }
         auth.getToken()
         
         // remove this segue

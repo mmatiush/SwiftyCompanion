@@ -8,5 +8,6 @@ target 'swiftyCompanion' do
   # Pods for swiftyCompanion
 pod 'Alamofire'
 pod 'SwiftyJSON'
+pod 'Locksmith'
 
 end

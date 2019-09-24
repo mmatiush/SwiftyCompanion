@@ -9,9 +9,10 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Locksmith
 
 class ProfileViewController: UIViewController {
-
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var backgroundView: UIView!
@@ -29,24 +30,26 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var skillsTable: UITableView!
     @IBOutlet weak var projectsTable: UITableView!
-
+    
     var json: JSON!
-
-//    func assignBackgroundImageForBackgroundView() {
-//        let background = UIImage(named: "background")
-//
-//        let imageView = UIImageView(frame: backgroundView.bounds)
-//        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
-//        imageView.clipsToBounds = true
-//        imageView.image = background
-//        imageView.center = backgroundView.center
-//        backgroundView.addSubview(imageView)
-//        backgroundView.sendSubviewToBack(imageView)
-//    }
+    
+    //    func assignBackgroundImageForBackgroundView() {
+    //        let background = UIImage(named: "background")
+    //
+    //        let imageView = UIImageView(frame: backgroundView.bounds)
+    //        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+    //        imageView.clipsToBounds = true
+    //        imageView.image = background
+    //        imageView.center = backgroundView.center
+    //        backgroundView.addSubview(imageView)
+    //        backgroundView.sendSubviewToBack(imageView)
+    //    }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
+        
         backgroundViewImage.frame = backgroundView.bounds
+        
     }
     
     override func viewDidLoad() {
@@ -65,7 +68,7 @@ class ProfileViewController: UIViewController {
         
         skillsTable.layer.cornerRadius = 5
         projectsTable.layer.cornerRadius = 5
-
+        
         setProfile()
         setPhoto()
         
@@ -104,7 +107,7 @@ class ProfileViewController: UIViewController {
             self.level.text = "Level: \(Int(level)) - \(Int(progress * 100))%"
         }
     }
-
+    
     func setPhoto() {
         guard let urlString = json["image_url"].string else { return }
         guard let url = URL(string: urlString) else { return }
@@ -124,7 +127,7 @@ class ProfileViewController: UIViewController {
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
+        
         switch tableView {
         case skillsTable:
             return json["cursus_users"][0]["skills"].count
@@ -162,13 +165,13 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             default:
                 cell.statusImage.image = #imageLiteral(resourceName: "in_progress")
             }
-        
+            
             if name != nil && mark != nil {
                 cell.projectLabel.text = name! + " - " + String(mark!).capitalized + "%"
             } else if name != nil {
                 cell.projectLabel.text = name! + " - in progress"
             }
-
+            
             return cell
         }
         return UITableViewCell()
