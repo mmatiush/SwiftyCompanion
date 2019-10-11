@@ -33,25 +33,6 @@ class ProfileViewController: UIViewController {
     
     var json: JSON!
     
-    //    func assignBackgroundImageForBackgroundView() {
-    //        let background = UIImage(named: "background")
-    //
-    //        let imageView = UIImageView(frame: backgroundView.bounds)
-    //        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
-    //        imageView.clipsToBounds = true
-    //        imageView.image = background
-    //        imageView.center = backgroundView.center
-    //        backgroundView.addSubview(imageView)
-    //        backgroundView.sendSubviewToBack(imageView)
-    //    }
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        
-        backgroundViewImage.frame = backgroundView.bounds
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -68,7 +49,7 @@ class ProfileViewController: UIViewController {
         
         skillsTable.layer.cornerRadius = 5
         projectsTable.layer.cornerRadius = 5
-        
+                
         setProfile()
         setPhoto()
         

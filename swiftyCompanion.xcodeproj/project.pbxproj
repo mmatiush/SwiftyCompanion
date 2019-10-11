@@ -48,13 +48,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10B6D39223217FEA00BC3602 /* ViewContorllers */ = {
+		10B6D39223217FEA00BC3602 /* Contorollers */ = {
 			isa = PBXGroup;
 			children = (
 				10D036A922EF3ADC00656BBE /* ViewController.swift */,
 				10CCFE3823072986002C0B10 /* ProfileViewController.swift */,
 			);
-			path = ViewContorllers;
+			path = Contorollers;
 			sourceTree = "<group>";
 		};
 		10B6D3932321803800BC3602 /* Supporting Files */ = {
@@ -107,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				10D036AB22EF3ADC00656BBE /* Main.storyboard */,
-				10B6D39223217FEA00BC3602 /* ViewContorllers */,
+				10B6D39223217FEA00BC3602 /* Contorollers */,
 				10C7FA8223269FD10087A9CA /* View */,
 				10B6D394232180B800BC3602 /* Networking */,
 				10B6D3932321803800BC3602 /* Supporting Files */,
