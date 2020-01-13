@@ -30,7 +30,7 @@ Mandatory Part :
 - [X] Do not create a token for each query
 
 Bonus :
-- [X] Use of Oauth2
+- [X] Use of OAuth 2.0
 - [X] Use of custom cells
 - [X] Recreate token at expire date
 - [X] Design
