@@ -5,8 +5,8 @@ Project from Unit Factory (School 42).
 
 #### Table of Contents
 
-- [Requirements](#requirements)
 - [Installation](#installation)
+- [Requirements](#requirements)
 - [Examples](#examples)
 
 ## Installation
