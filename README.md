@@ -1,7 +1,9 @@
 # SwiftyCompanion
 
-iOS application that will retrieve the information about a student of School 42, using the School 42 API.
-Project from Unit Factory (School 42).
+iOS application that will retrieve the information about a student of School 42, using the School 42 API.  
+Project from Unit Factory (School 42).  
+<img src="https://github.com/mmatiush/SwiftyCompanion/blob/master/ui.gif" width="300">
+
 
 #### Table of Contents
 
@@ -38,4 +40,4 @@ Bonus :
 
 ## Examples
 
-Try searching mmatiush
+Try searching mmatiush, otimofie, ylesik
